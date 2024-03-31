@@ -5,7 +5,7 @@ import Posts from "@/components/DashboardComps/postcomps/Posts"
 export default async function page() {
 
     return (
-        <div className='min-h-screen bg-white text-black px-2 py-4'>
+        <div className='min-h-screen flex flex-col lg:flex-row bg-white text-black px-2 py-4'>
             <CreatePost />
             <Posts />
         </div>

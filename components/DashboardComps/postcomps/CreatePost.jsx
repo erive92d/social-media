@@ -22,7 +22,7 @@ export function CreatePost() {
     }
 
     return (
-        <div className="grid w-full gap-2">
+        <div className="grid gap-2 px-4">
             <Textarea onChange={(e) => setContent(e.target.value)} placeholder="Type your message here." />
             <Button onClick={handlePost}>Send message</Button>
         </div>

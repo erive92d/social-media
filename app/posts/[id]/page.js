@@ -1,9 +1,11 @@
 "use client"
 
 import getOnePost from "@/actions/getOnePost"
+import SinglePost from "@/components/DashboardComps/postcomps/SinglePost"
 import { useEffect, useState } from "react"
 
 export default function page({ params }) {
+
     const { id } = params
     const [post, setPost] = useState(null)
 
@@ -17,13 +19,10 @@ export default function page({ params }) {
         }
     }, [id])
 
-
     return (
         <div>
             {!post ? <h1>Loading..</h1> :
-                <div>
-                    {post.content}
-                </div>
+                <SinglePost post={post} />
             }
         </div>
     )

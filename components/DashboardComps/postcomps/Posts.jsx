@@ -12,13 +12,13 @@ export default async function Posts() {
     return (
         <div>
             {posts?.map((post, index) => (
-                <Link href={`/posts/${post.id}`} className='border-b px-2 py-4' key={index}>
-                    <span className='font-bold'>{post.user.username}</span>
-                    <div className='mx-2 font-thin'>
+                <div className='px-2 py-4 border-b' key={index}>
+                    <Link href={`/posts/${post.id}`}>{post.user.username}</Link>
+                    <div className='font-thin'>
                         <p>{post.content}</p>
                         <p className='text-sm font-thin text-right'>{formatDate(post.createdAt)}</p>
                     </div>
-                </Link>
+                </div>
             ))}
         </div>
     )
